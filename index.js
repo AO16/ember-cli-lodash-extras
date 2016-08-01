@@ -1,8 +1,3 @@
-/* eslint-env node, amd */
-/* eslint no-var: "off" */
-/* eslint prefer-template: "off" */
-/* eslint object-shorthand: "off" */
-
 var Funnel = require('broccoli-funnel');
 var mergeTrees = require('broccoli-merge-trees');
 var path = require('path');
@@ -26,7 +21,7 @@ module.exports = {
     var trees = [];
     var lodashExtras = path.dirname(require.resolve('lodash-extras/dist/client/lodash-extras-w-ember.min'));
 
-    if (vendorTree) trees.push(vendorTree);
+    if (vendorTree) { trees.push(vendorTree); }
 
     trees.push(new Funnel(lodashExtras, { destDir: 'lodash-extras' }));
 
