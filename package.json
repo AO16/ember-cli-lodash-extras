@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-lodash-extras",
-  "version": "0.0.3",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.4",
+  "description": "Ember addon for lodash-extras inclusion.",
   "directories": {
     "doc": "doc",
     "test": "tests"
