@@ -13,8 +13,7 @@ module.exports = {
     app = target.app || target;
     lodashExtrasPath = 'vendor/lodash-extras';
 
-    app.import(path.join(lodashExtrasPath, 'lodash-extras.min.js'));
-
+    app.import(path.join(lodashExtrasPath, 'lodash-extras-w-ember.min.js'));
   },
 
   treeForVendor: function(vendorTree) {
