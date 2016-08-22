@@ -16,17 +16,21 @@ module.exports = {
     app.import(path.join(lodashExtrasPath, 'lodash-extras-w-ember.min.js'));
   },
 
+  contentFor: function(type) {
+    if (type === 'body-footer') {
+      return '<script>_.merge(_, lodashExtras.all)</script>';
+    }
+  },
+
   treeForVendor: function(vendorTree) {
     var trees = [];
-    var lodashExtras = path.dirname(require.resolve('lodash-extras/dist/client/lodash-extras-w-ember.min'));
+    var lodashExtras = path.dirname(require.resolve('lodash-extras/dist/client/lodash-extras-w-ember.min.js'));
 
     if (vendorTree) { trees.push(vendorTree); }
 
     trees.push(new Funnel(lodashExtras, { destDir: 'lodash-extras' }));
 
     return mergeTrees(trees);
-
   }
-
 
 };
