@@ -17,8 +17,8 @@ module.exports = {
   },
 
   contentFor: function(type) {
-    if (type === 'lodash-extras') {
-      return '<script>_.merge(_, lodashExtras.all)</script>';
+    if (type === 'body-footer') {
+      return '<script>_.assign(_, lodashExtras.all)</script>';
     }
   },
 
